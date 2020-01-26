@@ -1,0 +1,402 @@
+h1 {
+  background: rgba(0, 0, 0, 0.7);
+  color:white;
+  margin:0;
+  padding:10px 20px;
+    text-transform: uppercase;
+    font-size:24px;
+    font-weight:normal;
+    text-align: center;
+}
+
+h2 {
+  background: rgba(0, 0, 0, 0.7);
+  color:white;
+  padding:10px 20px;
+    text-transform: uppercase;
+    font-size:18px;
+    height:auto;
+    font-weight:normal;
+    text-align: center;
+}
+
+p {
+  padding: 0 10px 20px 10px;
+  text-align: justify;
+}
+.movieList {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family:'Raleway', sans-serif;
+}
+
+body {
+  background-image: url("/Users/pengfeihe/Desktop/ToDoListProject/assets/140573-black-curve-background.jpg");
+  /* background: #348F50;  fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  Chrome 10-25, Safari 5.1-6 
+    background: linear-gradient(to right, #56B4D3, #348F50); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.movieList > li {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  color:#666;
+}
+
+.movieList > li:nth-child(2n) {
+  background:#f7f7f7;
+}
+
+input {
+  font-size: 18px;
+  color:#666;
+  background-color: #f7f7f7;
+  width:100%;
+  padding:13px 13px 13px 20px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  background: #fff;
+  border:3px solid rgba(0, 0, 0, 0.5);
+  outline:none;
+}
+
+#task {
+  max-height: 300px;
+  overflow: auto;
+}
+
+#container {
+/*  background: #f7f7f7;*/
+  width:360px;
+  margin:100px auto;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+#introToMovie {
+  background: rgba(0, 0, 0, 0.7);
+  color:white;  
+}
+
+.watched {
+  color:gray;
+  text-decoration: line-through;
+}
+
+.delete {
+  background: #e74c3c;
+  margin-right: 5px;
+  color:white;
+  height:40px;
+  width: 0px;
+  text-align: center;
+  float:left;
+  display: inline-block;
+  opacity: 0;
+}
+
+#to-hide .movieList > li:hover span {
+  width:40px;
+  opacity: 1.0;
+  transition: 0.3s linear;
+}
+
+/*foundation css*/
+
+.offcanvas-full-screen {
+  position: fixed;
+  z-index: 1;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  overflow-y: auto;
+}
+
+[data-whatinput='mouse'] .offcanvas-full-screen {
+  outline: 0;
+}
+
+.offcanvas-full-screen.is-transition-overlap {
+  z-index: 10;
+}
+
+.offcanvas-full-screen.is-transition-overlap.is-open {
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+}
+
+.offcanvas-full-screen.is-open {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.offcanvas-full-screen.is-open ~ .off-canvas-content {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.offcanvas-full-screen.is-transition-push::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+  content: " ";
+}
+
+.offcanvas-full-screen.is-transition-overlap.is-open ~ .off-canvas-content {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.top-bar {
+  background: rgba(0, 0, 0, 0.7);
+  color:white;
+}
+
+.offcanvas-full-screen-inner {
+  padding: 1rem;
+  text-align: center;
+}
+
+.offcanvas-full-screen-menu {
+  margin: 0;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.offcanvas-full-screen-menu > li {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+[data-whatinput='mouse'] .offcanvas-full-screen-menu > li {
+  outline: 0;
+}
+
+.offcanvas-full-screen-menu > li > a {
+  display: block;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+}
+
+.offcanvas-full-screen-menu input,
+.offcanvas-full-screen-menu select,
+.offcanvas-full-screen-menu a,
+.offcanvas-full-screen-menu button {
+  margin-bottom: 0;
+}
+
+.offcanvas-full-screen-menu > li {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.offcanvas-full-screen-menu > li > a {
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.offcanvas-full-screen-menu a {
+  color: #fefefe;
+}
+
+.offcanvas-full-screen-menu a:hover {
+  color: #b2b2b2;
+}
+
+.offcanvas-full-screen-close {
+  color: #fefefe;
+  font-size: 5rem;
+}
+
+.offcanvas-full-screen-close:hover {
+  color: #b2b2b2;
+}
+
+/*foundation form*/
+.floated-label-wrapper {
+  position: relative;
+}
+
+.floated-label-wrapper label {
+  background: #fefefe;
+  color: #1779ba;
+  font-size: 0.75rem;
+  font-weight: 600;
+  left: 0.75rem;
+  opacity: 0;
+  padding: 0 0.25rem;
+  position: absolute;
+  top: 2rem;
+  transition: all 0.15s ease-in;
+  z-index: -1;
+}
+
+.floated-label-wrapper label input[type=text],
+.floated-label-wrapper label input[type=email],
+.floated-label-wrapper label input[type=password] {
+  border-radius: 4px;
+  font-size: 1.75em;
+  padding: 0.5em;
+}
+
+.floated-label-wrapper label.show {
+  opacity: 1;
+  top: -0.85rem;
+  z-index: 1;
+  transition: all 0.15s ease-in;
+}
+
+.sign-up {
+  font-size: 14px;
+  color:white;
+  margin-right: 10px;
+  padding:5px 10px 5px 10px;
+/*  background-color:rgba(255, 255, 255, 0.2);*/
+  border:0.2px solid rgba(255, 255, 255, 1);
+}
+
+/*footer*/
+
+
+/*pagination*/
+.pagination {
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+.pagination-pointed .pagination-pointed-button, .pagination-pointed .current, .pagination-pointed .pagination-previous {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #2c3840;
+  color: #fff;
+  outline: 0;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.pagination-pointed .pagination-pointed-button:hover, .pagination-pointed .current:hover, .pagination-pointed .pagination-previous:hover {
+  background-color: #41525e;
+}
+
+.pagination-pointed .current {
+  background: dodgerblue;
+}
+
+.pagination-pointed .current:hover {
+  background-color: #0077ea;
+}
+
+.pagination-pointed .pagination-next a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 18px;
+}
+
+.pagination-pointed .pagination-next a:hover::after {
+  border-left: 17px solid #41525e;
+}
+
+.pagination-pointed .pagination-next a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -18px;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #2c3840;
+  transition: all 0.2s linear;
+}
+
+.pagination-pointed .pagination-previous {
+  border-radius: 0 4px 4px 0;
+  margin-left: 18px;
+}
+
+.pagination-pointed .pagination-previous:hover::after {
+  border-right: 17px solid #41525e;
+}
+
+.pagination-pointed .pagination-previous::before {
+  content: "";
+}
+
+.pagination-pointed .pagination-previous::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18px;
+  width: 0;
+  height: 0;
+  border-bottom: 17px solid transparent;
+  border-top: 17px solid transparent;
+  border-right: 17px solid #2c3840;
+  transition: all 0.2s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

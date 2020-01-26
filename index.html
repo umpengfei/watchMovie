@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div id="offcanvas-full-screen" class="offcanvas-full-screen" data-off-canvas data-transition="overlap">
+      <div class="offcanvas-full-screen-inner">
+        <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <ul class="offcanvas-full-screen-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="top-bar">
+        <div class="top-bar-title show-for-medium" >
+          <strong>WishList</strong>
+        </div>
+        <div class="top-bar-right">
+          <button class="sign-up show-for-medium" type="button">Sign Up</button>
+          <button class="menu-icon light" type="button" data-toggle="offcanvas-full-screen"></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="to-hide">
+        <h1>Movies Wishlist</h1>
+        <input type="text" placeholder="Which movie to watch?">
+        <div id="task">
+          <ul class="movieList">
+          </ul>
+        </div>
+      </div>
+      <div id="intro"></div>
+      <div id="form"></div>
+    <div>
+
+    <!--     footer -->
+    <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+      <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+      <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+      <li><a class="pagination-pointed-button" href="#" aria-label="Page 2">2</a></li>
+      <li><a class="pagination-pointed-button" href="#" aria-label="Page 3">3</a></li>
+      <li><a class="pagination-pointed-button" href="#" aria-label="Page 4">4</a></li>
+      <li class="ellipsis" aria-hidden="true"></li>
+      <li><a class="pagination-pointed-button" href="#" aria-label="Page 12">12</a></li>
+      <li><a class="pagination-pointed-button" href="#" aria-label="Page 13">13</a></li>
+      <li class="pagination-next"><a class="pagination-pointed-button" href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+    </ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+
+</html>
